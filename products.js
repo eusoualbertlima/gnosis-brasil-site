@@ -23,8 +23,8 @@ export const PRODUCTS = [
     price: 149.9
   },
   {
-    id: 'salterio-gnostico',
-    name: 'Salterio Gnostico',
+    id: 'salmerio-gnostico',
+    name: 'Salmerio Gnostico',
     category: 'Livros',
     description: 'Edicao de apoio para estudos e praticas devocionais.',
     price: 64.9
@@ -37,11 +37,11 @@ export const PRODUCTS = [
     price: 39.9
   },
   {
-    id: 'incenso-templo',
-    name: 'Incenso Templo',
+    id: 'essencia-mirra',
+    name: 'Essencia Mirra',
     category: 'Essencias',
-    description: 'Incenso ritual para harmonizacao de ambiente.',
-    price: 24.9
+    description: 'Aroma de apoio para recolhimento e ambiente de estudo.',
+    price: 42.9
   },
   {
     id: 'livro-revolucao',
@@ -56,5 +56,12 @@ export const PRODUCTS = [
     category: 'Acessorios',
     description: 'Peca simbolica em metal com acabamento dourado.',
     price: 89.9
+  },
+  {
+    id: 'kit-estudo-inicial',
+    name: 'Kit Estudo Inicial',
+    category: 'Kits',
+    description: 'Combinacao de livro introdutorio, Salmerio e essencia.',
+    price: 179.9
   }
 ]

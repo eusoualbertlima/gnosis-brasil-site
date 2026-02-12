@@ -64,6 +64,17 @@ function renderCategories() {
   })
 }
 
+function bumpCartButton() {
+  cartCount.animate(
+    [
+      { transform: 'scale(1)' },
+      { transform: 'scale(1.25)' },
+      { transform: 'scale(1)' },
+    ],
+    { duration: 280, easing: 'ease' }
+  )
+}
+
 function addToCart(productId) {
   const existing = state.cart.find((item) => item.id === productId)
   if (existing) {
@@ -73,6 +84,7 @@ function addToCart(productId) {
   }
   saveCart()
   renderCart()
+  bumpCartButton()
 }
 
 function updateQty(productId, delta) {
@@ -224,6 +236,22 @@ function checkoutMessage(data) {
   ].join('%0A')
 }
 
+function setupReveal() {
+  const revealEls = document.querySelectorAll('[data-reveal]')
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view')
+      }
+    })
+  }, { threshold: 0.12 })
+
+  revealEls.forEach((el, index) => {
+    el.style.transitionDelay = `${Math.min(index * 35, 260)}ms`
+    observer.observe(el)
+  })
+}
+
 function setupEvents() {
   document.getElementById('search').addEventListener('input', (event) => {
     state.search = event.target.value
@@ -258,6 +286,7 @@ function init() {
   renderProducts()
   renderCart()
   setupEvents()
+  setupReveal()
 }
 
 init()

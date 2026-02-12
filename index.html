@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0b1a25" />
-  <meta name="description" content="Instituto Gnosis Brasil - Loja oficial de livros e itens de estudo gnostico." />
+  <meta name="description" content="Instituto Gnosis Brasil - Loja oficial de Tarot, Salmerio, essencias e materiais de estudo gnostico." />
   <title>Instituto Gnosis Brasil | Loja Oficial</title>
   <link rel="icon" href="assets/brand/logo-emblema.webp" type="image/webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,53 +14,73 @@
 </head>
 <body>
   <div class="bg-layer"></div>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
 
-  <header class="topbar shell">
+  <header class="topbar shell" id="topo" data-reveal>
     <a class="brand" href="#inicio" aria-label="Instituto Gnosis Brasil">
       <img class="brand-logo" src="assets/brand/logo-horizontal.webp" alt="Instituto Gnosis Brasil" />
     </a>
+    <nav class="top-links">
+      <a href="#instituto">Instituto</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#loja">Loja</a>
+      <a href="#checkout">Checkout</a>
+    </nav>
     <button class="button ghost" id="open-cart" type="button">Carrinho <span id="cart-count">0</span></button>
   </header>
 
   <main>
     <section class="hero shell" id="inicio">
-      <p class="kicker">Instituto Gnosis Brasil | V.M. Samael Aun Weor</p>
-      <h1>Conhecimento pratico e itens oficiais para estudo gnostico.</h1>
-      <p class="hero-copy">Loja online para livros, tarot, salterio, essencias e materiais de apoio. Pedido rapido com checkout por WhatsApp.</p>
-      <div class="hero-actions">
-        <a class="button" href="#loja">Ir para a loja</a>
-        <a class="button ghost" href="#instituto">Conhecer o instituto</a>
+      <p class="kicker" data-reveal>Instituto Gnosis Brasil | V.M. Samael Aun Weor</p>
+      <h1 data-reveal>Uma loja completa para apoiar a sua jornada de estudo e pratica gnostica.</h1>
+      <p class="hero-copy" data-reveal>Aqui voce encontra Tarot, Salmerio, essencias, livros e itens selecionados para fortalecer disciplina interior, concentracao e aprofundamento doutrinario.</p>
+      <div class="hero-actions" data-reveal>
+        <a class="button" href="#loja">Explorar a loja</a>
+        <a class="button ghost" href="#instituto">Conhecer a visao do Instituto</a>
+      </div>
+      <div class="hero-metrics" data-reveal>
+        <article><strong>+100</strong><span>Centros no pais</span></article>
+        <article><strong>Catalogo vivo</strong><span>Novos itens periodicos</span></article>
+        <article><strong>Checkout rapido</strong><span>Pedido por WhatsApp</span></article>
       </div>
     </section>
 
-    <section class="shell panel" id="instituto">
+    <section class="shell panel" id="instituto" data-reveal>
       <div class="institution-head">
         <img src="assets/brand/logo-emblema.webp" alt="Emblema Gnosis" />
         <div>
-          <h2>Identidade institucional aplicada</h2>
-          <p>Site alinhado a comunicacao do Instituto Gnosis Brasil, com foco em estudo, pratica e difusao dos ensinamentos.</p>
+          <h2>Instituto Gnosis Brasil</h2>
+          <p>Instituicao voltada ao autoconhecimento, baseada no ensino de V.M. Samael Aun Weor, com foco em pratica consciente e transformacao real.</p>
         </div>
       </div>
+      <div class="manifesto">
+        <p>Nosso compromisso e difundir conhecimento pratico com seriedade, profundidade e aplicacao no cotidiano. Esta loja foi estruturada para reunir itens oficiais de estudo e apoio ritual, com organizacao, clareza e confianca no processo de compra.</p>
+      </div>
+    </section>
+
+    <section class="shell panel" id="diferenciais" data-reveal>
+      <h2>Diferenciais da loja oficial</h2>
       <div class="feature-grid">
         <article class="card">
-          <h3>Escola de autoconhecimento</h3>
-          <p>Trilhas e estudos para ampliar consciencia e transformar a vida cotidiana.</p>
+          <h3>Curadoria institucional</h3>
+          <p>Selecao orientada por coerencia com os estudos e praticas da Gnosis.</p>
         </article>
         <article class="card">
-          <h3>Base no ensino de V.M. Samael Aun Weor</h3>
-          <p>Conteudo e materiais orientados para pratica interior com metodo.</p>
+          <h3>Orientacao clara</h3>
+          <p>Descricoes objetivas para facilitar a escolha dos itens corretos.</p>
         </article>
         <article class="card">
-          <h3>Loja online integrada</h3>
-          <p>Catalogo de itens com carrinho, frete, forma de pagamento e finalizacao de pedido.</p>
+          <h3>Compra assistida</h3>
+          <p>Fluxo por WhatsApp para validacao rapida de pedido e entrega.</p>
         </article>
       </div>
     </section>
 
-    <section class="shell panel" id="loja">
+    <section class="shell panel" id="loja" data-reveal>
       <div class="shop-head">
         <h2>Lojinha oficial</h2>
-        <p>Itens disponiveis para venda online.</p>
+        <p>Tarot, Salmerio, essencias, livros e acessorios para estudo gnostico.</p>
       </div>
 
       <div class="filters">
@@ -71,8 +91,9 @@
       <div id="product-grid" class="product-grid"></div>
     </section>
 
-    <section class="shell panel" id="checkout">
-      <h2>Checkout e configuracao</h2>
+    <section class="shell panel" id="checkout" data-reveal>
+      <h2>Checkout e configuracao de venda</h2>
+      <p class="section-copy">Preencha os dados abaixo para gerar o pedido completo no WhatsApp com subtotal, frete, total e forma de pagamento.</p>
       <div class="checkout-grid">
         <form id="checkout-form" class="checkout-form">
           <label>Nome completo<input name="customerName" required /></label>
@@ -84,7 +105,7 @@
           <label>Pagamento
             <select name="paymentMethod" id="payment-method"></select>
           </label>
-          <label>Observacoes<textarea name="notes" rows="3" placeholder="Referencia de entrega, horarios etc."></textarea></label>
+          <label>Observacoes<textarea name="notes" rows="3" placeholder="Referencia de entrega, horarios e observacoes do pedido."></textarea></label>
           <button type="submit" class="button">Finalizar pedido por WhatsApp</button>
         </form>
 
@@ -99,6 +120,11 @@
       </div>
     </section>
   </main>
+
+  <footer class="shell footer" data-reveal>
+    <p>Instituto Gnosis Brasil | Loja oficial de itens de estudo</p>
+    <a href="#topo">Voltar ao topo</a>
+  </footer>
 
   <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
     <div class="cart-header">
