@@ -19,6 +19,7 @@ const shippingMethodEl = document.getElementById('shipping-method')
 const paymentMethodEl = document.getElementById('payment-method')
 const pixNoteEl = document.getElementById('pix-note')
 const checkoutForm = document.getElementById('checkout-form')
+const toastEl = document.getElementById('toast')
 
 function brl(value) {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: STORE_CONFIG.currency }).format(value)
@@ -48,6 +49,12 @@ function filteredProducts() {
   })
 }
 
+function showToast(message) {
+  toastEl.textContent = message
+  toastEl.classList.add('show')
+  setTimeout(() => toastEl.classList.remove('show'), 1400)
+}
+
 function renderCategories() {
   categoryFilters.innerHTML = ''
   categories().forEach((category) => {
@@ -68,10 +75,10 @@ function bumpCartButton() {
   cartCount.animate(
     [
       { transform: 'scale(1)' },
-      { transform: 'scale(1.25)' },
+      { transform: 'scale(1.2)' },
       { transform: 'scale(1)' },
     ],
-    { duration: 280, easing: 'ease' }
+    { duration: 260, easing: 'ease' }
   )
 }
 
@@ -85,6 +92,7 @@ function addToCart(productId) {
   saveCart()
   renderCart()
   bumpCartButton()
+  showToast('Item adicionado ao carrinho')
 }
 
 function updateQty(productId, delta) {
@@ -102,6 +110,7 @@ function clearCart() {
   state.cart = []
   saveCart()
   renderCart()
+  showToast('Carrinho limpo')
 }
 
 function renderProducts() {
@@ -211,6 +220,7 @@ function checkoutMessage(data) {
   const subtotal = lines.reduce((acc, cur) => acc + cur.line, 0)
   const shipping = currentShipping().price
   const total = subtotal + shipping
+  const orderCode = `GB-${Date.now()}`
 
   const productsText = lines.map((line) => `- ${line.qty}x ${line.name} (${brl(line.line)})`).join('%0A')
   const paymentName = STORE_CONFIG.paymentMethods.find((method) => method.id === data.paymentMethod)?.name || data.paymentMethod
@@ -218,6 +228,7 @@ function checkoutMessage(data) {
 
   return [
     '*Pedido Loja Instituto Gnosis Brasil*',
+    `Codigo: ${orderCode}`,
     '',
     `Cliente: ${data.customerName}`,
     `WhatsApp: ${data.customerPhone}`,
@@ -240,15 +251,30 @@ function setupReveal() {
   const revealEls = document.querySelectorAll('[data-reveal]')
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view')
-      }
+      if (entry.isIntersecting) entry.target.classList.add('in-view')
     })
   }, { threshold: 0.12 })
 
   revealEls.forEach((el, index) => {
-    el.style.transitionDelay = `${Math.min(index * 35, 260)}ms`
+    el.style.transitionDelay = `${Math.min(index * 35, 280)}ms`
     observer.observe(el)
+  })
+}
+
+function setupMenuToggle() {
+  const toggle = document.getElementById('menu-toggle')
+  const links = document.getElementById('top-links')
+
+  toggle.onclick = () => {
+    const open = links.classList.toggle('open')
+    toggle.setAttribute('aria-expanded', String(open))
+  }
+
+  links.querySelectorAll('a').forEach((link) => {
+    link.onclick = () => {
+      links.classList.remove('open')
+      toggle.setAttribute('aria-expanded', 'false')
+    }
   })
 }
 
@@ -267,15 +293,13 @@ function setupEvents() {
 
   checkoutForm.onsubmit = (event) => {
     event.preventDefault()
-
     if (!state.cart.length) {
-      alert('Adicione itens no carrinho antes de finalizar.')
+      showToast('Adicione itens no carrinho antes de finalizar')
       return
     }
 
     const formData = Object.fromEntries(new FormData(checkoutForm).entries())
-    const message = checkoutMessage(formData)
-    const url = `https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${message}`
+    const url = `https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${checkoutMessage(formData)}`
     window.open(url, '_blank', 'noopener,noreferrer')
   }
 }
@@ -287,6 +311,7 @@ function init() {
   renderCart()
   setupEvents()
   setupReveal()
+  setupMenuToggle()
 }
 
 init()

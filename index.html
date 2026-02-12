@@ -21,28 +21,33 @@
     <a class="brand" href="#inicio" aria-label="Instituto Gnosis Brasil">
       <img class="brand-logo" src="assets/brand/logo-horizontal.webp" alt="Instituto Gnosis Brasil" />
     </a>
-    <nav class="top-links">
+
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="top-links">Menu</button>
+
+    <nav class="top-links" id="top-links">
       <a href="#instituto">Instituto</a>
       <a href="#diferenciais">Diferenciais</a>
       <a href="#loja">Loja</a>
-      <a href="#checkout">Checkout</a>
+      <a href="#como-comprar">Como comprar</a>
+      <a href="#faq">FAQ</a>
     </nav>
+
     <button class="button ghost" id="open-cart" type="button">Carrinho <span id="cart-count">0</span></button>
   </header>
 
   <main>
     <section class="hero shell" id="inicio">
       <p class="kicker" data-reveal>Instituto Gnosis Brasil | V.M. Samael Aun Weor</p>
-      <h1 data-reveal>Uma loja completa para apoiar a sua jornada de estudo e pratica gnostica.</h1>
-      <p class="hero-copy" data-reveal>Aqui voce encontra Tarot, Salmerio, essencias, livros e itens selecionados para fortalecer disciplina interior, concentracao e aprofundamento doutrinario.</p>
+      <h1 data-reveal>Loja institucional profissional para estudo, pratica e aprofundamento gnostico.</h1>
+      <p class="hero-copy" data-reveal>Um ambiente completo para adquirir Tarot, Salmerio, essencias, livros e kits de estudo com confianca, orientacao clara e checkout rapido.</p>
       <div class="hero-actions" data-reveal>
-        <a class="button" href="#loja">Explorar a loja</a>
-        <a class="button ghost" href="#instituto">Conhecer a visao do Instituto</a>
+        <a class="button" href="#loja">Ver produtos</a>
+        <a class="button ghost" href="#checkout">Ir para checkout</a>
       </div>
       <div class="hero-metrics" data-reveal>
-        <article><strong>+100</strong><span>Centros no pais</span></article>
-        <article><strong>Catalogo vivo</strong><span>Novos itens periodicos</span></article>
-        <article><strong>Checkout rapido</strong><span>Pedido por WhatsApp</span></article>
+        <article><strong>Curadoria oficial</strong><span>Itens alinhados com o Instituto</span></article>
+        <article><strong>Compra assistida</strong><span>Pedido detalhado via WhatsApp</span></article>
+        <article><strong>Checkout estruturado</strong><span>Frete, pagamento e resumo automatico</span></article>
       </div>
     </section>
 
@@ -51,11 +56,11 @@
         <img src="assets/brand/logo-emblema.webp" alt="Emblema Gnosis" />
         <div>
           <h2>Instituto Gnosis Brasil</h2>
-          <p>Instituicao voltada ao autoconhecimento, baseada no ensino de V.M. Samael Aun Weor, com foco em pratica consciente e transformacao real.</p>
+          <p>Baseado nos ensinamentos de V.M. Samael Aun Weor, com foco em autoconhecimento pratico e desenvolvimento interior consistente.</p>
         </div>
       </div>
       <div class="manifesto">
-        <p>Nosso compromisso e difundir conhecimento pratico com seriedade, profundidade e aplicacao no cotidiano. Esta loja foi estruturada para reunir itens oficiais de estudo e apoio ritual, com organizacao, clareza e confianca no processo de compra.</p>
+        <p>Esta loja foi desenhada para atender alunos e interessados com uma experiencia clara, moderna e objetiva: buscar, comparar, adicionar ao carrinho e concluir pedido com agilidade.</p>
       </div>
     </section>
 
@@ -63,23 +68,23 @@
       <h2>Diferenciais da loja oficial</h2>
       <div class="feature-grid">
         <article class="card">
-          <h3>Curadoria institucional</h3>
-          <p>Selecao orientada por coerencia com os estudos e praticas da Gnosis.</p>
+          <h3>Copy orientada para conversao</h3>
+          <p>Textos claros para destacar valor, utilidade e contexto de cada item.</p>
         </article>
         <article class="card">
-          <h3>Orientacao clara</h3>
-          <p>Descricoes objetivas para facilitar a escolha dos itens corretos.</p>
+          <h3>Design profissional e intencional</h3>
+          <p>Visual institucional com hierarquia forte, contrastes corretos e navegacao limpa.</p>
         </article>
         <article class="card">
-          <h3>Compra assistida</h3>
-          <p>Fluxo por WhatsApp para validacao rapida de pedido e entrega.</p>
+          <h3>Animacoes e interacoes relevantes</h3>
+          <p>Revelacao em scroll, feedback no carrinho e transicoes suaves sem poluir.</p>
         </article>
       </div>
     </section>
 
     <section class="shell panel" id="loja" data-reveal>
       <div class="shop-head">
-        <h2>Lojinha oficial</h2>
+        <h2>Catalogo oficial</h2>
         <p>Tarot, Salmerio, essencias, livros e acessorios para estudo gnostico.</p>
       </div>
 
@@ -91,9 +96,36 @@
       <div id="product-grid" class="product-grid"></div>
     </section>
 
+    <section class="shell panel" id="como-comprar" data-reveal>
+      <h2>Como comprar online</h2>
+      <div class="steps-grid">
+        <article class="step-card"><span>1</span><h3>Escolha os itens</h3><p>Filtre por categoria e adicione os produtos ao carrinho.</p></article>
+        <article class="step-card"><span>2</span><h3>Preencha o checkout</h3><p>Informe nome, WhatsApp, cidade, frete e forma de pagamento.</p></article>
+        <article class="step-card"><span>3</span><h3>Confirme no WhatsApp</h3><p>O sistema monta a mensagem completa do pedido para envio imediato.</p></article>
+      </div>
+    </section>
+
+    <section class="shell panel" id="faq" data-reveal>
+      <h2>Perguntas frequentes</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Como funciona o pagamento por Pix?</summary>
+          <p>A chave Pix aparece no resumo do checkout e tambem na mensagem enviada para o WhatsApp da equipe.</p>
+        </details>
+        <details>
+          <summary>Posso ajustar frete ou quantidade depois?</summary>
+          <p>Sim. O pedido chega detalhado no WhatsApp e pode ser confirmado com ajustes antes do fechamento final.</p>
+        </details>
+        <details>
+          <summary>Os produtos sao oficiais do Instituto?</summary>
+          <p>Sim. O catalogo desta pagina foi estruturado para centralizar os itens da lojinha oficial.</p>
+        </details>
+      </div>
+    </section>
+
     <section class="shell panel" id="checkout" data-reveal>
-      <h2>Checkout e configuracao de venda</h2>
-      <p class="section-copy">Preencha os dados abaixo para gerar o pedido completo no WhatsApp com subtotal, frete, total e forma de pagamento.</p>
+      <h2>Checkout profissional</h2>
+      <p class="section-copy">Finalize com dados completos para agilizar atendimento, separacao e envio dos itens.</p>
       <div class="checkout-grid">
         <form id="checkout-form" class="checkout-form">
           <label>Nome completo<input name="customerName" required /></label>
@@ -122,7 +154,7 @@
   </main>
 
   <footer class="shell footer" data-reveal>
-    <p>Instituto Gnosis Brasil | Loja oficial de itens de estudo</p>
+    <p>Instituto Gnosis Brasil | Loja oficial</p>
     <a href="#topo">Voltar ao topo</a>
   </footer>
 
@@ -137,6 +169,8 @@
       <a class="button" href="#checkout" id="go-checkout">Ir para checkout</a>
     </div>
   </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script type="module" src="products.js"></script>
   <script type="module" src="app.js"></script>

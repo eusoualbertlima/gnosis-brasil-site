@@ -26,21 +26,21 @@ export const PRODUCTS = [
     id: 'salmerio-gnostico',
     name: 'Salmerio Gnostico',
     category: 'Livros',
-    description: 'Edicao de apoio para estudos e praticas devocionais.',
+    description: 'Edicao de apoio para estudos, salmos e praticas devocionais.',
     price: 64.9
   },
   {
     id: 'essencia-lotus',
     name: 'Essencia Lotus',
     category: 'Essencias',
-    description: 'Essencia aromatica para praticas de concentracao.',
+    description: 'Essencia aromatica para concentracao e recolhimento.',
     price: 39.9
   },
   {
     id: 'essencia-mirra',
     name: 'Essencia Mirra',
     category: 'Essencias',
-    description: 'Aroma de apoio para recolhimento e ambiente de estudo.',
+    description: 'Aroma de apoio para harmonizacao do ambiente de estudo.',
     price: 42.9
   },
   {
@@ -63,5 +63,12 @@ export const PRODUCTS = [
     category: 'Kits',
     description: 'Combinacao de livro introdutorio, Salmerio e essencia.',
     price: 179.9
+  },
+  {
+    id: 'tarot-sintese',
+    name: 'Tarot de Sintese',
+    category: 'Tarot',
+    description: 'Conjunto de estudo para leituras introdutorias orientadas.',
+    price: 129.9
   }
 ]
