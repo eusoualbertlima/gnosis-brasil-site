@@ -1,19 +1,25 @@
-﻿# Instituto Gnosis Brasil - Loja Online
+﻿# Lumisial Kefren - Loja Online
 
-Site institucional com lojinha pronta para venda online.
+Site institucional e comercial multipagina, com foco em venda online.
 
-## Arquivos principais
-- `index.html`: estrutura do site e checkout
-- `styles.css`: identidade visual
-- `products.js`: produtos e configuracao da loja
-- `app.js`: logica de carrinho, resumo e checkout WhatsApp
+## Estrutura
+- `index.html`: home e destaques
+- `loja/index.html`: catalogo geral
+- `loja/tarot.html`, `loja/salmerio.html`, `loja/essencias.html`: subpaginas de categoria
+- `loja/produto.html`: pagina de produto por query string (`?slug=`)
+- `checkout.html`: carrinho + fechamento de pedido
+- `sobre.html` e `contato.html`: paginas institucionais
 
-## Configuracoes que voce precisa ajustar
-No arquivo `products.js`:
-1. `STORE_CONFIG.whatsappNumber` -> numero que recebe pedidos
-2. `STORE_CONFIG.pixKey` -> chave Pix oficial
-3. `STORE_CONFIG.shippingMethods` -> fretes reais
-4. `PRODUCTS` -> catalogo real de itens (tarot, salterio, essencias etc.)
+## Configuracao da loja
+Edite `assets/js/data.js`:
+- `STORE.whatsapp`
+- `STORE.pixKey`
+- `STORE.shipping`
+- `PRODUCTS`
 
-## Publicacao
-Publicado em GitHub Pages.
+## Checkout
+Pedido final enviado para WhatsApp com:
+- dados do cliente
+- itens e quantidades
+- subtotal, frete e total
+- forma de pagamento

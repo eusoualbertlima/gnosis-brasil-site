@@ -3,176 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b1a25" />
-  <meta name="description" content="Instituto Gnosis Brasil - Loja oficial de Tarot, Salmerio, essencias e materiais de estudo gnostico." />
-  <title>Instituto Gnosis Brasil | Loja Oficial</title>
-  <link rel="icon" href="assets/brand/logo-emblema.webp" type="image/webp" />
+  <title>Lumisial Kefren | Loja Oficial</title>
+  <meta name="description" content="Lumisial Kefren - Loja oficial com Tarot, Salmerio, Essencias e Kits." />
+  <link rel="icon" href="assets/img/lk-mark.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <div class="bg-layer"></div>
-  <div class="orb orb-a"></div>
-  <div class="orb orb-b"></div>
-
-  <header class="topbar shell" id="topo" data-reveal>
-    <a class="brand" href="#inicio" aria-label="Instituto Gnosis Brasil">
-      <img class="brand-logo" src="assets/brand/logo-horizontal.webp" alt="Instituto Gnosis Brasil" />
-    </a>
-
-    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="top-links">Menu</button>
-
-    <nav class="top-links" id="top-links">
-      <a href="#instituto">Instituto</a>
-      <a href="#diferenciais">Diferenciais</a>
-      <a href="#loja">Loja</a>
-      <a href="#como-comprar">Como comprar</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-
-    <button class="button ghost" id="open-cart" type="button">Carrinho <span id="cart-count">0</span></button>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/img/lk-mark.svg" alt="Lumisial Kefren"/> LUMISIAL KEFREN</a>
+      <nav class="nav-links">
+        <a class="active" href="index.html">Inicio</a>
+        <a href="loja/index.html">Loja</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <a class="btn btn-ghost" href="checkout.html">Carrinho <span data-cart-count>0</span></a>
+    </div>
   </header>
 
-  <main>
-    <section class="hero shell" id="inicio">
-      <p class="kicker" data-reveal>Instituto Gnosis Brasil | V.M. Samael Aun Weor</p>
-      <h1 data-reveal>Loja institucional profissional para estudo, pratica e aprofundamento gnostico.</h1>
-      <p class="hero-copy" data-reveal>Um ambiente completo para adquirir Tarot, Salmerio, essencias, livros e kits de estudo com confianca, orientacao clara e checkout rapido.</p>
-      <div class="hero-actions" data-reveal>
-        <a class="button" href="#loja">Ver produtos</a>
-        <a class="button ghost" href="#checkout">Ir para checkout</a>
-      </div>
-      <div class="hero-metrics" data-reveal>
-        <article><strong>Curadoria oficial</strong><span>Itens alinhados com o Instituto</span></article>
-        <article><strong>Compra assistida</strong><span>Pedido detalhado via WhatsApp</span></article>
-        <article><strong>Checkout estruturado</strong><span>Frete, pagamento e resumo automatico</span></article>
+  <main class="shell">
+    <section class="hero">
+      <p class="kicker">Loja Lumisial Kefren</p>
+      <h1>Site profissional, estruturado e pronto para venda online.</h1>
+      <p>Subpaginas organizadas para facilitar descoberta de produtos, leitura de detalhes e fechamento de pedido com checkout via WhatsApp.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a class="btn btn-primary" href="loja/index.html">Entrar na loja</a>
+        <a class="btn btn-ghost" href="checkout.html">Ir para checkout</a>
       </div>
     </section>
 
-    <section class="shell panel" id="instituto" data-reveal>
-      <div class="institution-head">
-        <img src="assets/brand/logo-emblema.webp" alt="Emblema Gnosis" />
-        <div>
-          <h2>Instituto Gnosis Brasil</h2>
-          <p>Baseado nos ensinamentos de V.M. Samael Aun Weor, com foco em autoconhecimento pratico e desenvolvimento interior consistente.</p>
-        </div>
-      </div>
-      <div class="manifesto">
-        <p>Esta loja foi desenhada para atender alunos e interessados com uma experiencia clara, moderna e objetiva: buscar, comparar, adicionar ao carrinho e concluir pedido com agilidade.</p>
+    <section class="panel">
+      <h2>Principais categorias</h2>
+      <div class="grid-3">
+        <a class="card" href="loja/tarot.html"><h3>Tarot</h3><p>Baralhos para leitura simbolica e estudo.</p></a>
+        <a class="card" href="loja/salmerio.html"><h3>Salmerio</h3><p>Edicoes para pratica diaria e encontros.</p></a>
+        <a class="card" href="loja/essencias.html"><h3>Essencias</h3><p>Compostos aromaticos para concentracao.</p></a>
       </div>
     </section>
 
-    <section class="shell panel" id="diferenciais" data-reveal>
-      <h2>Diferenciais da loja oficial</h2>
-      <div class="feature-grid">
-        <article class="card">
-          <h3>Copy orientada para conversao</h3>
-          <p>Textos claros para destacar valor, utilidade e contexto de cada item.</p>
-        </article>
-        <article class="card">
-          <h3>Design profissional e intencional</h3>
-          <p>Visual institucional com hierarquia forte, contrastes corretos e navegacao limpa.</p>
-        </article>
-        <article class="card">
-          <h3>Animacoes e interacoes relevantes</h3>
-          <p>Revelacao em scroll, feedback no carrinho e transicoes suaves sem poluir.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="shell panel" id="loja" data-reveal>
-      <div class="shop-head">
-        <h2>Catalogo oficial</h2>
-        <p>Tarot, Salmerio, essencias, livros e acessorios para estudo gnostico.</p>
-      </div>
-
-      <div class="filters">
-        <input id="search" type="search" placeholder="Buscar produto" aria-label="Buscar produto" />
-        <div id="category-filters" class="category-filters"></div>
-      </div>
-
-      <div id="product-grid" class="product-grid"></div>
-    </section>
-
-    <section class="shell panel" id="como-comprar" data-reveal>
-      <h2>Como comprar online</h2>
-      <div class="steps-grid">
-        <article class="step-card"><span>1</span><h3>Escolha os itens</h3><p>Filtre por categoria e adicione os produtos ao carrinho.</p></article>
-        <article class="step-card"><span>2</span><h3>Preencha o checkout</h3><p>Informe nome, WhatsApp, cidade, frete e forma de pagamento.</p></article>
-        <article class="step-card"><span>3</span><h3>Confirme no WhatsApp</h3><p>O sistema monta a mensagem completa do pedido para envio imediato.</p></article>
-      </div>
-    </section>
-
-    <section class="shell panel" id="faq" data-reveal>
-      <h2>Perguntas frequentes</h2>
-      <div class="faq-list">
-        <details>
-          <summary>Como funciona o pagamento por Pix?</summary>
-          <p>A chave Pix aparece no resumo do checkout e tambem na mensagem enviada para o WhatsApp da equipe.</p>
-        </details>
-        <details>
-          <summary>Posso ajustar frete ou quantidade depois?</summary>
-          <p>Sim. O pedido chega detalhado no WhatsApp e pode ser confirmado com ajustes antes do fechamento final.</p>
-        </details>
-        <details>
-          <summary>Os produtos sao oficiais do Instituto?</summary>
-          <p>Sim. O catalogo desta pagina foi estruturado para centralizar os itens da lojinha oficial.</p>
-        </details>
-      </div>
-    </section>
-
-    <section class="shell panel" id="checkout" data-reveal>
-      <h2>Checkout profissional</h2>
-      <p class="section-copy">Finalize com dados completos para agilizar atendimento, separacao e envio dos itens.</p>
-      <div class="checkout-grid">
-        <form id="checkout-form" class="checkout-form">
-          <label>Nome completo<input name="customerName" required /></label>
-          <label>WhatsApp<input name="customerPhone" required /></label>
-          <label>Cidade / UF<input name="customerCity" required /></label>
-          <label>Entrega
-            <select name="shippingMethod" id="shipping-method"></select>
-          </label>
-          <label>Pagamento
-            <select name="paymentMethod" id="payment-method"></select>
-          </label>
-          <label>Observacoes<textarea name="notes" rows="3" placeholder="Referencia de entrega, horarios e observacoes do pedido."></textarea></label>
-          <button type="submit" class="button">Finalizar pedido por WhatsApp</button>
-        </form>
-
-        <aside class="summary" id="order-summary">
-          <h3>Resumo do pedido</h3>
-          <div id="summary-items"></div>
-          <div class="summary-line"><span>Subtotal</span><strong id="subtotal">R$ 0,00</strong></div>
-          <div class="summary-line"><span>Frete</span><strong id="shipping">R$ 0,00</strong></div>
-          <div class="summary-line total"><span>Total</span><strong id="total">R$ 0,00</strong></div>
-          <p class="pix-note" id="pix-note"></p>
-        </aside>
-      </div>
+    <section class="panel">
+      <h2>Destaques da semana</h2>
+      <div id="product-grid" class="product-grid" data-highlight="true" data-depth="0"></div>
     </section>
   </main>
 
-  <footer class="shell footer" data-reveal>
-    <p>Instituto Gnosis Brasil | Loja oficial</p>
-    <a href="#topo">Voltar ao topo</a>
+  <footer>
+    <div class="shell">Lumisial Kefren © 2026 | Loja oficial</div>
   </footer>
-
-  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
-    <div class="cart-header">
-      <h3>Carrinho</h3>
-      <button class="button ghost" id="close-cart" type="button">Fechar</button>
-    </div>
-    <div id="cart-items" class="cart-items"></div>
-    <div class="cart-footer">
-      <button class="button ghost" id="clear-cart" type="button">Limpar</button>
-      <a class="button" href="#checkout" id="go-checkout">Ir para checkout</a>
-    </div>
-  </aside>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script type="module" src="products.js"></script>
-  <script type="module" src="app.js"></script>
+  <div id="toast" class="toast"></div>
+  <script type="module" src="assets/js/site.js"></script>
 </body>
 </html>
