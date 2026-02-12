@@ -1,79 +1,118 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b1620" />
-  <meta name="description" content="Gnosis Brasil - escola de autoconhecimento e pratica interior." />
-  <title>Gnosis Brasil</title>
-  <link rel="icon" href="assets/gnosis-mark.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#0b1a25" />
+  <meta name="description" content="Instituto Gnosis Brasil - Loja oficial de livros e itens de estudo gnostico." />
+  <title>Instituto Gnosis Brasil | Loja Oficial</title>
+  <link rel="icon" href="assets/brand/logo-emblema.webp" type="image/webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-grid"></div>
-  <header class="top">
-    <div class="brand">
-      <img src="assets/gnosis-mark.svg" alt="Gnosis Brasil" />
-      <span>GNOSIS BRASIL</span>
-    </div>
-    <a class="btn btn-ghost" href="#contato">Falar com a equipe</a>
+  <div class="bg-layer"></div>
+
+  <header class="topbar shell">
+    <a class="brand" href="#inicio" aria-label="Instituto Gnosis Brasil">
+      <img class="brand-logo" src="assets/brand/logo-horizontal.webp" alt="Instituto Gnosis Brasil" />
+    </a>
+    <button class="button ghost" id="open-cart" type="button">Carrinho <span id="cart-count">0</span></button>
   </header>
 
   <main>
-    <section class="hero">
-      <p class="eyebrow">Escola de desenvolvimento interior</p>
-      <h1>Conhecimento pratico para viver com direcao.</h1>
-      <p class="subtitle">Uma jornada estruturada para clareza mental, disciplina e transformacao real no cotidiano.</p>
-      <div class="actions">
-        <a class="btn" href="#programas">Ver programas</a>
-        <a class="btn btn-ghost" href="#sobre">Conhecer a escola</a>
+    <section class="hero shell" id="inicio">
+      <p class="kicker">Instituto Gnosis Brasil | V.M. Samael Aun Weor</p>
+      <h1>Conhecimento pratico e itens oficiais para estudo gnostico.</h1>
+      <p class="hero-copy">Loja online para livros, tarot, salterio, essencias e materiais de apoio. Pedido rapido com checkout por WhatsApp.</p>
+      <div class="hero-actions">
+        <a class="button" href="#loja">Ir para a loja</a>
+        <a class="button ghost" href="#instituto">Conhecer o instituto</a>
       </div>
     </section>
 
-    <section id="sobre" class="panel">
-      <h2>Base da identidade Gnosis Brasil</h2>
-      <div class="grid three">
-        <article class="card">
-          <h3>Autoconhecimento guiado</h3>
-          <p>Estudo e pratica para aumentar consciencia, foco e inteligencia emocional.</p>
-        </article>
-        <article class="card">
-          <h3>Metodo e consistencia</h3>
-          <p>Trilhas de aprendizado progressivas para evolucao com base e rotina.</p>
-        </article>
-        <article class="card">
-          <h3>Comunidade ativa</h3>
-          <p>Ambiente de conexao com pessoas comprometidas com o proprio desenvolvimento.</p>
-        </article>
+    <section class="shell panel" id="instituto">
+      <div class="institution-head">
+        <img src="assets/brand/logo-emblema.webp" alt="Emblema Gnosis" />
+        <div>
+          <h2>Identidade institucional aplicada</h2>
+          <p>Site alinhado a comunicacao do Instituto Gnosis Brasil, com foco em estudo, pratica e difusao dos ensinamentos.</p>
+        </div>
       </div>
-    </section>
-
-    <section id="programas" class="panel">
-      <h2>Programas em destaque</h2>
-      <div class="grid three">
+      <div class="feature-grid">
         <article class="card">
-          <h3>Formacao Base</h3>
-          <p>Fundamentos da Gnosis com encontros semanais e exercicios praticos.</p>
+          <h3>Escola de autoconhecimento</h3>
+          <p>Trilhas e estudos para ampliar consciencia e transformar a vida cotidiana.</p>
         </article>
         <article class="card">
-          <h3>Mentoria de Direcao</h3>
-          <p>Acompanhamento para alinhar vida pessoal, espiritual e profissional.</p>
+          <h3>Base no ensino de V.M. Samael Aun Weor</h3>
+          <p>Conteudo e materiais orientados para pratica interior com metodo.</p>
         </article>
         <article class="card">
-          <h3>Imersoes Presenciais</h3>
-          <p>Experiencias intensivas para aprofundar disciplina e transformacao.</p>
+          <h3>Loja online integrada</h3>
+          <p>Catalogo de itens com carrinho, frete, forma de pagamento e finalizacao de pedido.</p>
         </article>
       </div>
     </section>
 
-    <section id="contato" class="panel cta-panel">
-      <h2>Pronto para comecar?</h2>
-      <p>Entre em contato para conhecer turmas abertas e proximos eventos.</p>
-      <a class="btn" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">Abrir WhatsApp</a>
+    <section class="shell panel" id="loja">
+      <div class="shop-head">
+        <h2>Lojinha oficial</h2>
+        <p>Itens disponiveis para venda online.</p>
+      </div>
+
+      <div class="filters">
+        <input id="search" type="search" placeholder="Buscar produto" aria-label="Buscar produto" />
+        <div id="category-filters" class="category-filters"></div>
+      </div>
+
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+    <section class="shell panel" id="checkout">
+      <h2>Checkout e configuracao</h2>
+      <div class="checkout-grid">
+        <form id="checkout-form" class="checkout-form">
+          <label>Nome completo<input name="customerName" required /></label>
+          <label>WhatsApp<input name="customerPhone" required /></label>
+          <label>Cidade / UF<input name="customerCity" required /></label>
+          <label>Entrega
+            <select name="shippingMethod" id="shipping-method"></select>
+          </label>
+          <label>Pagamento
+            <select name="paymentMethod" id="payment-method"></select>
+          </label>
+          <label>Observacoes<textarea name="notes" rows="3" placeholder="Referencia de entrega, horarios etc."></textarea></label>
+          <button type="submit" class="button">Finalizar pedido por WhatsApp</button>
+        </form>
+
+        <aside class="summary" id="order-summary">
+          <h3>Resumo do pedido</h3>
+          <div id="summary-items"></div>
+          <div class="summary-line"><span>Subtotal</span><strong id="subtotal">R$ 0,00</strong></div>
+          <div class="summary-line"><span>Frete</span><strong id="shipping">R$ 0,00</strong></div>
+          <div class="summary-line total"><span>Total</span><strong id="total">R$ 0,00</strong></div>
+          <p class="pix-note" id="pix-note"></p>
+        </aside>
+      </div>
     </section>
   </main>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Carrinho</h3>
+      <button class="button ghost" id="close-cart" type="button">Fechar</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <button class="button ghost" id="clear-cart" type="button">Limpar</button>
+      <a class="button" href="#checkout" id="go-checkout">Ir para checkout</a>
+    </div>
+  </aside>
+
+  <script type="module" src="products.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
